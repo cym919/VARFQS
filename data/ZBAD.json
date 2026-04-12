@@ -1,0 +1,121 @@
+{
+  "icao": "ZBAD",
+  "iata": "PKX",
+  "name": "北京大兴国际机场",
+  "nameEn": "Beijing Daxing International Airport",
+  "frequencies": [
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "Chinese",
+      "frequency": "127.225",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "English",
+      "frequency": "128.4",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "118.825",
+      "backup": "124.35",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "118.375",
+      "backup": "124.35",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "130.425",
+      "backup": "130.3",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "118.725",
+      "backup": "130.3",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "122.15",
+      "backup": "121.775",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.7",
+      "backup": "121.775",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.975",
+      "backup": "121.775",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "121.625",
+      "backup": "121.775",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "121.7",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "122.6",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "Delivery",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.875",
+      "backup": "121.775",
+      "postRemark": "DCL AVBL"
+    },
+    {
+      "type": "Delivery",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.825",
+      "backup": null,
+      "postRemark": "DCL AVBL"
+    }
+  ],
+  "updatedAt": "2026-04-12T13:52:51.584Z"
+}

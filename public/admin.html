@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARFQS 管理后台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VARFQS 管理后台</h1>
+            <nav>
+                <a href="index.html">频率查询</a>
+                <a href="admin.html" class="active">管理后台</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="admin-section">
+            <div class="admin-header">
+                <h2>机场管理</h2>
+                <div class="header-actions">
+                    <button class="btn-primary" onclick="showAddAirport()">添加机场</button>
+                    <button class="btn-secondary" onclick="showSettings()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        设置
+                    </button>
+                </div>
+            </div>
+
+            <div class="airport-table-container">
+                <table class="airport-table" id="airportTable">
+                    <thead>
+                        <tr>
+                            <th>ICAO</th>
+                            <th>IATA</th>
+                            <th>机场名称</th>
+                            <th>频率数量</th>
+                            <th>更新时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="airportTableBody">
+                        <tr><td colspan="5" class="loading">加载中...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="airportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">添加机场</h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="airportForm">
+                    <input type="hidden" id="editIcao">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ICAO代码 <span class="required">*</span></label>
+                            <input type="text" id="airportIcaoInput" placeholder="如: ZBAA" maxlength="4" required>
+                        </div>
+                        <div class="form-group">
+                            <label>IATA代码</label>
+                            <input type="text" id="airportIataInput" placeholder="如: PEK" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>机场名称 <span class="required">*</span></label>
+                            <input type="text" id="airportNameInput" placeholder="如: 北京首都国际机场" required>
+                        </div>
+                        <div class="form-group">
+                            <label>英文名称</label>
+                            <input type="text" id="airportNameEnInput" placeholder="如: Beijing Capital International Airport">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>无线电频率</label>
+                        <div class="frequency-actions">
+                            <button type="button" class="btn-add-frequency" onclick="addFrequencyRow()">添加频率</button>
+                            <button type="button" class="btn-ai-import" onclick="showAIImport()">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                </svg>
+                                AI 导入
+                            </button>
+                        </div>
+                        <div class="frequency-editor" id="frequencyEditor"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeModal()">取消</button>
+                        <button type="submit" class="btn-primary">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h3>确认删除</h3>
+                <button class="close-btn" onclick="closeDeleteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除机场 <strong id="deleteAirportName"></strong> 吗？此操作不可恢复。</p>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeDeleteModal()">取消</button>
+                    <button type="button" class="btn-danger" onclick="confirmDelete()">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>系统设置</h3>
+                <button class="close-btn" onclick="closeSettingsModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="settingsForm">
+                    <div class="form-group">
+                        <label>AI API 地址</label>
+                        <input type="text" id="aiApiEndpoint" placeholder="https://api.openai.com/v1/chat/completions" value="https://api.openai.com/v1/chat/completions">
+                    </div>
+                    <div class="form-group">
+                        <label>AI API 密钥</label>
+                        <input type="password" id="aiApiKey" placeholder="sk-...">
+                    </div>
+                    <div class="form-group">
+                        <label>AI 模型</label>
+                        <input type="text" id="aiModel" placeholder="gpt-3.5-turbo" value="gpt-3.5-turbo">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="testAIConnection()">测试连接</button>
+                        <button type="button" class="btn-secondary" onclick="closeSettingsModal()">取消</button>
+                        <button type="submit" class="btn-primary">保存设置</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="aiImportModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>AI 一键导入频率</h3>
+                <button class="close-btn" onclick="closeAIImportModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="aiImportForm">
+                    <div class="form-group">
+                        <label>原始频率文本</label>
+                        <textarea id="aiImportText" rows="10" placeholder="粘贴原始频率文本，每行一个频率..."></textarea>
+                    </div>
+                    <div id="aiImportPreview" style="display: none;">
+                        <h4>解析结果预览</h4>
+                        <div class="preview-table-container">
+                            <table class="preview-table">
+                                <thead>
+                                    <tr>
+                                        <th>类型</th>
+                                        <th>序号</th>
+                                        <th>前备注</th>
+                                        <th>频率</th>
+                                        <th>备用频率</th>
+                                        <th>后备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="aiImportPreviewBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeAIImportModal()">取消</button>
+                        <button type="button" id="aiImportButton" class="btn-primary" onclick="processAIImport()">解析</button>
+                        <button type="button" id="aiRegenerateButton" style="display: none;" class="btn-secondary" onclick="processAIImport()">重新生成</button>
+                        <button type="button" id="aiConfirmButton" style="display: none;" class="btn-primary" onclick="confirmAIImport()">确认导入</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 cym919 - Voneip 机场无线电频率查询系统 (VARFQS) | 数据仅供参考</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

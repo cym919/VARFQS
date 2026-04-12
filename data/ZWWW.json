@@ -1,0 +1,89 @@
+{
+  "icao": "ZWWW",
+  "name": "乌鲁木齐天山国际机场",
+  "iata": "URC",
+  "nameEn": "Urumqi Tianshan International Airport",
+  "frequencies": [
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "ARR",
+      "frequency": "126.8",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "DEP",
+      "frequency": "126.7",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": null,
+      "preRemark": null,
+      "frequency": "118.75",
+      "backup": "124.3",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": null,
+      "preRemark": null,
+      "frequency": "118.1",
+      "backup": "124.3",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": null,
+      "preRemark": null,
+      "frequency": "121.65",
+      "backup": "124.3",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": null,
+      "preRemark": null,
+      "frequency": "121.55",
+      "backup": "124.3",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.8",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "121.95",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "122.15",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "Delivery",
+      "number": null,
+      "preRemark": null,
+      "frequency": "121.9",
+      "backup": "124.3",
+      "postRemark": "DCL AVBL"
+    }
+  ],
+  "updatedAt": "2026-04-11T16:34:45.282Z"
+}

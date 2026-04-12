@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voneip 机场无线电频率查询系统 | cym919</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Voneip 机场无线电频率查询系统</h1>
+            <nav>
+                <a href="index.html" class="active">频率查询</a>
+                <a href="admin.html" class="admin-entry" style="display: none;">管理后台</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="输入ICAO/IATA代码或机场名称搜索...">
+                <button onclick="searchAirports()">搜索</button>
+            </div>
+        </section>
+
+        <section class="airport-list" id="airportList">
+            <p class="loading">加载中...</p>
+        </section>
+
+        <section class="frequency-display" id="frequencyDisplay" style="display: none;">
+            <div class="airport-header">
+                <h2 id="airportName"></h2>
+                <span class="icao-code" id="airportIcao"></span>
+                <button class="back-btn" onclick="hideFrequency()">返回列表</button>
+            </div>
+            <div class="type-legend" id="typeLegend"></div>
+            <div class="frequency-list" id="frequencyList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 cym919 - Voneip 机场无线电频率查询系统 (VARFQS) | 数据仅供参考</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

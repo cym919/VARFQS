@@ -1,0 +1,137 @@
+{
+  "icao": "ZBAA",
+  "iata": "PEK",
+  "name": "北京首都国际机场",
+  "nameEn": "Beijing Capital International Airport",
+  "frequencies": [
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "English",
+      "frequency": "128.65",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "Chinese",
+      "frequency": "127.6",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "124.3",
+      "backup": "118.3",
+      "postRemark": "for 18R/36L"
+    },
+    {
+      "type": "TWR",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "118.5",
+      "backup": "118.05",
+      "postRemark": "for 18L/36R"
+    },
+    {
+      "type": "TWR",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "118.6",
+      "backup": "118.3",
+      "postRemark": "for 01/19"
+    },
+    {
+      "type": "Delivery",
+      "number": 1,
+      "preRemark": "west of RWY 18L/36R",
+      "frequency": "121.6",
+      "backup": null,
+      "postRemark": "DCL AVBL"
+    },
+    {
+      "type": "Delivery",
+      "number": 2,
+      "preRemark": "east of RWY 18L/36R",
+      "frequency": "121.65",
+      "backup": null,
+      "postRemark": "DCL AVBL"
+    },
+    {
+      "type": "GND",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.9",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "121.8",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "121.7",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "121.75",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 5,
+      "preRemark": null,
+      "frequency": "121.85",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "122.225",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.625",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "122.675",
+      "backup": "121.95",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "122.125",
+      "backup": "121.95",
+      "postRemark": null
+    }
+  ],
+  "updatedAt": "2026-04-11T16:30:46.945Z"
+}
