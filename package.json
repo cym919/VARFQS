@@ -2,6 +2,7 @@
   "name": "airport-radio",
   "version": "1.0.0",
   "description": "机场无线电频率管理系统",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

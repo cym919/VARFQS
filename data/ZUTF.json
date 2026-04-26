@@ -3,6 +3,119 @@
   "iata": "TFU",
   "name": "成都天府国际机场",
   "nameEn": "Chengdu Tianfu International Airport",
-  "frequencies": [],
-  "updatedAt": "2026-04-11T16:48:43.577Z"
+  "frequencies": [
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "English",
+      "frequency": "127.075",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "Chinese",
+      "frequency": "126.8",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "118.8",
+      "backup": "118.15",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "130.5",
+      "backup": "118.15",
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "124.375",
+      "backup": "118.15",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "122.7",
+      "backup": "122.15",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.825",
+      "backup": "122.15",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "122.15",
+      "backup": "122.7",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "122.675",
+      "backup": "122.15",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.925",
+      "backup": "121.55",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.6",
+      "backup": "121.55",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "121.775",
+      "backup": "121.55",
+      "postRemark": null
+    },
+    {
+      "type": "Delivery",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.825",
+      "backup": "121.55",
+      "postRemark": null
+    },
+    {
+      "type": "Delivery",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "122.2",
+      "backup": "121.55",
+      "postRemark": null
+    }
+  ],
+  "updatedAt": "2026-04-23T15:08:24.367Z"
 }

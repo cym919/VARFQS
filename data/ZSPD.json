@@ -3,6 +3,127 @@
   "iata": "PVG",
   "name": "上海浦东国际机场",
   "nameEn": "Shanghai Pudong International Airport",
-  "frequencies": [],
-  "updatedAt": "2026-04-11T16:49:42.196Z"
+  "frequencies": [
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "English",
+      "frequency": "127.85",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "D-ATIS",
+      "number": null,
+      "preRemark": "Chinese",
+      "frequency": "128.65",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "TWR",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "118.8",
+      "backup": "118.325",
+      "postRemark": "for RWY17L/35R, 17R/35L"
+    },
+    {
+      "type": "TWR",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "118.4",
+      "backup": "118.725",
+      "postRemark": "for RWY16L/34R, 16R/34L"
+    },
+    {
+      "type": "TWR",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "124.35",
+      "backup": "118.325",
+      "postRemark": "for RWY17L/35R"
+    },
+    {
+      "type": "TWR",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "118.575",
+      "backup": "118.725",
+      "postRemark": "for RWY16R/34L"
+    },
+    {
+      "type": "APN",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.65",
+      "backup": "122.125",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "121.975",
+      "backup": "122.125",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "122.7",
+      "backup": "122.125",
+      "postRemark": null
+    },
+    {
+      "type": "APN",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "122.6",
+      "backup": "122.125",
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 1,
+      "preRemark": null,
+      "frequency": "121.7",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 2,
+      "preRemark": null,
+      "frequency": "121.8",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 3,
+      "preRemark": null,
+      "frequency": "121.875",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "GND",
+      "number": 4,
+      "preRemark": null,
+      "frequency": "121.625",
+      "backup": null,
+      "postRemark": null
+    },
+    {
+      "type": "Delivery",
+      "number": null,
+      "preRemark": null,
+      "frequency": "121.95",
+      "backup": "121.625",
+      "postRemark": "DCL AVBL"
+    }
+  ],
+  "updatedAt": "2026-04-23T14:43:23.399Z"
 }
